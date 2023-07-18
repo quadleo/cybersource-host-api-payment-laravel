@@ -1,0 +1,45 @@
+{
+    "clientReferenceInformation": {
+        "code": "NIC12345"
+    },
+    "consumerAuthenticationInformation": {
+        "referenceId": "64827f74-99fa-4109-842e-0dbfc9738876",
+        "returnUrl": "http://cybersource.test/confirm-api-pay"
+    },
+    "processingInformation": {
+        "capture": true,
+        "actionList": [
+            "CONSUMER_AUTHENTICATION"
+        ]
+    },
+    "orderInformation": {
+        "billTo": {
+            "country": "US",
+            "lastName": "VDP",
+            "address2": "Address2",
+            "address1": "201S.DivisionSt.",
+            "postalCode": "48104-2201",
+            "locality": "AnnArbor",
+            "administrativeArea": "MI",
+            "firstName": "RTS",
+            "phoneNumber": "999999999",
+            "district": "MI",
+            "buildingNumber": "123",
+            "company": "Visa",
+            "email": "test@cybs.com"
+        },
+        "amountDetails": {
+            "totalAmount": "1.00",
+            "currency": "NPR"
+        }
+    },
+    "paymentInformation": {
+        "card": {
+            "number": "4111111111111111",
+            "expirationYear": "2024",
+            "expirationMonth": "03",
+            "securityCode": "123",
+            "type": "001"
+        }
+    }
+}

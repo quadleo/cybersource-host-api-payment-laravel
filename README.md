@@ -26,3 +26,5 @@ Error Handling: Information on how to handle errors and exceptions returned by t
 Security and Compliance: Best practices for securing sensitive data and meeting compliance standards (e.g., PCI DSS).
 Code Examples: Sample code snippets demonstrating how to make API calls for payment processing.
 Support: Contact information for support channels in case developers encounter issues during the integration process.
+
+#reference : https://github.com/e-payment/test-3ds2-api

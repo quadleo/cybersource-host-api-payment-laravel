@@ -70,7 +70,7 @@ class HomeController extends Controller
             ],
             "consumerAuthenticationInformation" => [
                 "referenceId" => "64827f74-99fa-4109-842e-0dbfc9738876",
-                "returnUrl" => "http://cybersource.test/confirm-api-pay-redirect"
+                "returnUrl" => "https://chilaxhouse.com.np/confirm-api-pay-redirect"
             ],
             "processingInformation" => [
                 "capture" => true,

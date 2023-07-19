@@ -22,8 +22,8 @@ Route::post('/api-pay',[HomeController::class, 'apiPost'])->name('api-post');
 Route::get('/api-auth-setup-reply',[HomeController::class, 'apiAuthSetupReply'])->name('api-auth-setup-reply');
 Route::get('/api-auth-setup-url',[HomeController::class, 'apiAuthSetupUrl'])->name('api-auth-setup-url');
 
-Route::group(['prefix' => 'webook'], function () {    
-    Route::post('/confirm-api-pay-redirect',[HomeController::class, 'apiConfirmPayRedirect'])->name('api-payment-redirect');
+Route::group(['prefix' => 'webhook'], function () {    
+    Route::any('/confirm-api-pay-redirect',[HomeController::class, 'apiConfirmPayRedirect'])->name('api-payment-redirect');
 });
 
 Route::get('/hosted-pay',[CSPaymentHostController::class, 'index'])->name('hosted-pay');

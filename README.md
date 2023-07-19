@@ -150,11 +150,27 @@ Please note that this is a generic template, and you should supplement it with s
 - Step2: enter expiry month and year, after year field call api , `/api/cybsersource/auth-setup`
   that will call api for auth-setup to validate your card details.
 	And you'll get the success or error response.
-- Step3: If success, proceed for payment, and call for authentication api that will authenticate your details, 
+- Step3: If success, proceed for payment, and call for authentication api or direct post to `/api-pay` that will authenticate your details, 
 	 If authorized, it will redirect to opt section.
 	 If failed, please redirect or show the error message from response.
+   Note: please make sure to customize your response
+   `
+   "consumerAuthenticationInformation" => [
+                "referenceId" => "XXX-XX-4109-842e-XXXX", // reference_code
+                "returnUrl" => "your_response_url",
+            ],
+    `
 - Step4: After otp validation, it will redirect to your response page where you have to capture the response that included authtransationId.
+  `
+  $response['authenticationInformation']->authenticationTransactionId
+  `
 - Step5: Lastly, call makepayment api for settlement with that authtransactionID and redirect to success page. That's all.
+  `
+  
+        $api_client = new ApiClient($config, $merchantConfig);
+        $api_instance = new PaymentsApi($api_client);
+        $apiResponse = $api_instance->createPayment($requestObj);
+  `
 ```
 <?php
 

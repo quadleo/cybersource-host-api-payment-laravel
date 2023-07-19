@@ -147,7 +147,7 @@ Please note that this is a generic template, and you should supplement it with s
 ### API Checkout Example (Using PHP Requests library):
 ## Process for payment with Card Number
 - Step1: enter card number.
-- Step2: enter expiry month and year, after year field call api , 
+- Step2: enter expiry month and year, after year field call api , `/api/cybsersource/auth-setup`
   that will call api for auth-setup to validate your card details.
 	And you'll get the success or error response.
 - Step3: If success, proceed for payment, and call for authentication api that will authenticate your details, 

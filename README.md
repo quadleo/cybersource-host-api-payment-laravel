@@ -165,12 +165,11 @@ Please note that this is a generic template, and you should supplement it with s
   $response['authenticationInformation']->authenticationTransactionId
   `
 - Step5: Lastly, call makepayment api for settlement with that authtransactionID and redirect to success page. That's all.
-  `
+  
   
         $api_client = new ApiClient($config, $merchantConfig);
         $api_instance = new PaymentsApi($api_client);
         $apiResponse = $api_instance->createPayment($requestObj);
-  `
 ```
 <?php
 

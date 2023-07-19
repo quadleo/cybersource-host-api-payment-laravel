@@ -145,6 +145,16 @@ Please note that this is a generic template, and you should supplement it with s
 
 ```
 ### API Checkout Example (Using PHP Requests library):
+## Process for payment with Card Number
+- Step1: enter card number.
+- Step2: enter expiry month and year, after year field call api , 
+  that will call api for auth-setup to validate your card details.
+	And you'll get the success or error response.
+- Step3: If success, proceed for payment, and call for authentication api that will authenticate your details, 
+	 If authorized, it will redirect to opt section.
+	 If failed, please redirect or show the error message from response.
+- Step4: After otp validation, it will redirect to your response page where you have to capture the response that included authtransationId.
+- Step5: Lastly, call makepayment api for settlement with that authtransactionID and redirect to success page. That's all.
 ```
 <?php
 

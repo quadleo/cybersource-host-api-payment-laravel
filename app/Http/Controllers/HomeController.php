@@ -137,7 +137,7 @@ class HomeController extends Controller
                 "code" => "NIC12345"
             ],
             "consumerAuthenticationInformation" => [
-                "authenticationTransactionId"=>  $request['authenticationInformation']->authenticationTransactionId,
+                "authenticationTransactionId"=>  $request->TransactionId,
                 "directoryServerTransactionId"=> "bf72e834-f633-4a49-87f8-4a61cd522afe"
 
             ],
